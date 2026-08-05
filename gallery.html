@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Patna Public School</title>
+<meta name="description" content="Photo gallery of campus life, events and facilities at Patna Public School.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg fixed-top site-nav">
+  <div class="container">
+    <a class="navbar-brand crest" href="index.html">
+      <svg viewBox="0 0 42 48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 2 L39 9 V22 C39 34 31 43 21 46 C11 43 3 34 3 22 V9 Z" fill="#4E1620" stroke="#C6972F" stroke-width="1.5"/>
+        <path d="M21 14 C24 17 25 20 21 24 C17 20 18 17 21 14 Z" fill="#C6972F"/>
+        <rect x="13" y="30" width="16" height="3" rx="1" fill="#F1E1B8"/>
+        <rect x="13" y="35" width="16" height="2" rx="1" fill="#F1E1B8" opacity=".7"/>
+      </svg>
+      <span class="crest-word"><span class="line1">Patna Public School</span><span class="line2">Est. 1985 · Bailey Road</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-gold" href="admissions.html">Apply Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== PAGE HEADER ========== -->
+<header class="page-header">
+  <div class="container position-relative">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-gold mb-3">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+      </ol>
+    </nav>
+    <h1>Campus life, in pictures</h1>
+    <p class="lede mt-3" style="max-width:600px; color:rgba(251,247,239,.82)">Classrooms, playing fields and stage lights — a look at a typical year at Patna Public School.</p>
+  </div>
+</header>
+
+<!-- ========== FILTERS ========== -->
+<section class="section-sm">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="galleryFilters">
+      <button class="btn btn-maroon btn-sm rounded-pill filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-maroon-outline btn-sm rounded-pill filter-btn" data-filter="campus">Campus</button>
+      <button class="btn btn-maroon-outline btn-sm rounded-pill filter-btn" data-filter="academics">Academics</button>
+      <button class="btn btn-maroon-outline btn-sm rounded-pill filter-btn" data-filter="sports">Sports</button>
+      <button class="btn btn-maroon-outline btn-sm rounded-pill filter-btn" data-filter="events">Events</button>
+    </div>
+
+    <div class="row g-3" id="galleryGrid">
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="campus">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="The main academic block on Bailey Road">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=700&auto=format&fit=crop" alt="Main academic block">
+          <div class="gallery-overlay"><span>Main Academic Block</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="academics">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="Students collaborating in class">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=700&auto=format&fit=crop" alt="Students in classroom">
+          <div class="gallery-overlay"><span>Classroom Discussion</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="sports">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="Annual sports meet on the athletics track">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=700&auto=format&fit=crop" alt="Athletics track">
+          <div class="gallery-overlay"><span>Annual Sports Meet</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="events">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="Cultural performance at Annual Day">
+          <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=700&auto=format&fit=crop" alt="Annual Day performance">
+          <div class="gallery-overlay"><span>Annual Day Performance</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="academics">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="Science lab session">
+          <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=700&auto=format&fit=crop" alt="Science lab">
+          <div class="gallery-overlay"><span>Science Lab Session</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="campus">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="The central library reading room">
+          <img src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=700&auto=format&fit=crop" alt="Library reading room">
+          <div class="gallery-overlay"><span>Central Library</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="sports">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="Basketball court session">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=700&auto=format&fit=crop" alt="Basketball court">
+          <div class="gallery-overlay"><span>Basketball Court</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="events">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1560523159-4a9692d222f8?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="Inter-house science exhibition">
+          <img src="https://images.unsplash.com/photo-1560523159-4a9692d222f8?q=80&w=700&auto=format&fit=crop" alt="Science exhibition">
+          <div class="gallery-overlay"><span>Science Exhibition</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 gallery-cell" data-cat="campus">
+        <div class="gallery-item" style="aspect-ratio:4/3" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-gallery-src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1200&auto=format&fit=crop" data-gallery-caption="Art and craft studio">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=700&auto=format&fit=crop" alt="Art studio">
+          <div class="gallery-overlay"><span>Art &amp; Craft Studio</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LIGHTBOX MODAL ========== -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0" style="background:transparent;">
+      <button type="button" class="btn-close btn-close-white ms-auto me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img id="lightboxImage" src="" alt="Gallery image" class="w-100 rounded" style="max-height:75vh; object-fit:cover;">
+      <p id="lightboxCaption" class="text-center text-white mt-3 mb-0"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <a class="crest navbar-dark d-inline-flex mb-3" href="index.html">
+          <svg viewBox="0 0 42 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 2 L39 9 V22 C39 34 31 43 21 46 C11 43 3 34 3 22 V9 Z" fill="#4E1620" stroke="#C6972F" stroke-width="1.5"/>
+            <path d="M21 14 C24 17 25 20 21 24 C17 20 18 17 21 14 Z" fill="#C6972F"/>
+            <rect x="13" y="30" width="16" height="3" rx="1" fill="#F1E1B8"/>
+            <rect x="13" y="35" width="16" height="2" rx="1" fill="#F1E1B8" opacity=".7"/>
+          </svg>
+          <span class="crest-word"><span class="line1">Patna Public School</span><span class="line2">Est. 1985 · Bailey Road</span></span>
+        </a>
+        <p class="small mb-4">A CBSE-affiliated school on Bailey Road, Patna, educating Nursery through Class XII since 1985.</p>
+        <div class="d-flex gap-2">
+          <a href="#" class="footer-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Explore</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small">
+          <li><a href="academics.html#events">Events</a></li>
+          <li><a href="about.html#facilities">Facilities</a></li>
+          <li><a href="admissions.html#form">Admission Form</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6>Reach Us</h6>
+        <ul class="list-unstyled d-flex flex-column gap-3 small">
+          <li class="d-flex gap-2"><i class="bi bi-geo-alt-fill mt-1"></i><span>Bailey Road, Patna, Bihar – 800014</span></li>
+          <li class="d-flex gap-2"><i class="bi bi-telephone-fill mt-1"></i><a href="tel:+919876012345">+91 98760 12345</a></li>
+          <li class="d-flex gap-2"><i class="bi bi-envelope-fill mt-1"></i><a href="mailto:info@patnapublicschool.com">info@patnapublicschool.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span>&copy; 2026 Patna Public School. All rights reserved.</span>
+      <span>Bailey Road, Patna, Bihar – 800014</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(function(b){
+        b.classList.remove('btn-maroon','active');
+        b.classList.add('btn-maroon-outline');
+      });
+      btn.classList.remove('btn-maroon-outline');
+      btn.classList.add('btn-maroon','active');
+      var filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.gallery-cell').forEach(function(cell){
+        if(filter === 'all' || cell.getAttribute('data-cat') === filter){
+          cell.style.display = '';
+        } else {
+          cell.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

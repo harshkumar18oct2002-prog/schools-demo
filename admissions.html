@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admissions — Patna Public School</title>
+<meta name="description" content="Start your child's admission at Patna Public School — process, eligibility, and the online admission enquiry form.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Admit-card ticket styling, scoped to this page */
+  .admit-card{
+    display:grid;
+    grid-template-columns: 1fr 260px;
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:var(--shadow-soft);
+    border:1px solid rgba(78,22,32,.1);
+  }
+  @media (max-width: 767px){ .admit-card{grid-template-columns:1fr;} }
+  .admit-main{padding:2.4rem;}
+  .admit-stub{
+    background:var(--maroon-900);
+    color:var(--cream-50);
+    padding:2.2rem 1.6rem;
+    position:relative;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .admit-stub::before{
+    content:'';
+    position:absolute; left:0; top:0; bottom:0; width:0;
+    border-left:2px dashed rgba(251,247,239,.3);
+  }
+  .admit-stub::after{
+    content:'';
+    position:absolute; left:-14px; top:-14px; width:28px; height:28px;
+    background:var(--cream-50); border-radius:50%;
+  }
+  .admit-stub .stub-hole-bottom{
+    position:absolute; left:-14px; bottom:-14px; width:28px; height:28px;
+    background:var(--cream-50); border-radius:50%;
+  }
+  .admit-stub .stub-label{
+    writing-mode:vertical-rl; text-orientation:mixed;
+    font-family:var(--font-display); letter-spacing:.06em;
+    font-size:1.05rem; color:var(--gold-100); font-weight:700;
+    align-self:center; margin:0 auto;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg fixed-top site-nav">
+  <div class="container">
+    <a class="navbar-brand crest" href="index.html">
+      <svg viewBox="0 0 42 48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 2 L39 9 V22 C39 34 31 43 21 46 C11 43 3 34 3 22 V9 Z" fill="#4E1620" stroke="#C6972F" stroke-width="1.5"/>
+        <path d="M21 14 C24 17 25 20 21 24 C17 20 18 17 21 14 Z" fill="#C6972F"/>
+        <rect x="13" y="30" width="16" height="3" rx="1" fill="#F1E1B8"/>
+        <rect x="13" y="35" width="16" height="2" rx="1" fill="#F1E1B8" opacity=".7"/>
+      </svg>
+      <span class="crest-word"><span class="line1">Patna Public School</span><span class="line2">Est. 1985 · Bailey Road</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="admissions.html">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-gold" href="#form">Apply Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== PAGE HEADER ========== -->
+<header class="page-header">
+  <div class="container position-relative">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-gold mb-3">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Admissions</li>
+      </ol>
+    </nav>
+    <h1>Admissions open for 2026–27</h1>
+    <p class="lede mt-3" style="max-width:600px; color:rgba(251,247,239,.82)">Nursery through Class XI. A simple, transparent process — from enquiry to enrolment in five steps.</p>
+  </div>
+</header>
+
+<!-- ========== PROCESS ========== -->
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow justify-content-center">How It Works</span>
+      <h2 class="section-title mt-2">Five steps to a seat at PPS</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 col-xl reveal">
+        <div class="card-elevated p-4 h-100 text-center">
+          <div class="facility-icon mx-auto"><i class="bi bi-pencil-square"></i></div>
+          <h6 class="fw-bold mt-2">1. Submit Enquiry</h6>
+          <p class="text-muted small mb-0">Fill the form below or call the admissions office.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl reveal">
+        <div class="card-elevated p-4 h-100 text-center">
+          <div class="facility-icon mx-auto"><i class="bi bi-file-earmark-text"></i></div>
+          <h6 class="fw-bold mt-2">2. Document Review</h6>
+          <p class="text-muted small mb-0">Share birth certificate and previous report card, if applicable.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl reveal">
+        <div class="card-elevated p-4 h-100 text-center">
+          <div class="facility-icon mx-auto"><i class="bi bi-people"></i></div>
+          <h6 class="fw-bold mt-2">3. Interaction</h6>
+          <p class="text-muted small mb-0">An informal meeting with the child and parents — not a formal test.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl reveal">
+        <div class="card-elevated p-4 h-100 text-center">
+          <div class="facility-icon mx-auto"><i class="bi bi-card-checklist"></i></div>
+          <h6 class="fw-bold mt-2">4. Offer of Seat</h6>
+          <p class="text-muted small mb-0">Admission offers are sent within 5 working days.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl reveal">
+        <div class="card-elevated p-4 h-100 text-center">
+          <div class="facility-icon mx-auto"><i class="bi bi-check2-circle"></i></div>
+          <h6 class="fw-bold mt-2">5. Confirm Enrolment</h6>
+          <p class="text-muted small mb-0">Complete the fee payment to secure your child's seat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ELIGIBILITY / FEES NOTE ========== -->
+<section class="section-sm bg-cream-100">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card-elevated p-4 h-100">
+          <h5 class="fw-bold mb-3"><i class="bi bi-info-circle text-forest me-2"></i>Eligibility</h5>
+          <ul class="text-muted small mb-0 ps-3">
+            <li class="mb-2">Nursery: child must turn 3 years by 31st March of the academic year.</li>
+            <li class="mb-2">Class I and above: subject to seat availability and an informal interaction.</li>
+            <li>Transfer students require a transfer certificate from their previous school.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-elevated p-4 h-100">
+          <h5 class="fw-bold mb-3"><i class="bi bi-cash-coin text-forest me-2"></i>Fee Structure</h5>
+          <p class="text-muted small mb-0">Detailed, class-wise fee structures are shared directly with families after the initial interaction, so figures stay accurate for the year your child is joining. Call our admissions office at <a href="tel:+919876012345">+91 98760 12345</a> for the current fee schedule.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ADMISSION FORM (Admit-card styled) ========== -->
+<section class="section" id="form">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow justify-content-center">Admission Enquiry</span>
+      <h2 class="section-title mt-2">Request a seat for your child</h2>
+      <p class="text-muted container-narrow mx-auto">Fill this out and our admissions office will call you within one working day to schedule the campus visit.</p>
+    </div>
+
+    <div class="admit-card mx-auto" style="max-width:980px;">
+      <div class="admit-main">
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="studentName">Student's Full Name</label>
+              <input type="text" class="form-control" id="studentName" required>
+              <div class="invalid-feedback">Please enter the student's name.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" required>
+              <div class="invalid-feedback">Please enter date of birth.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="classApplying">Class Applying For</label>
+              <select class="form-select" id="classApplying" required>
+                <option value="" selected disabled>Choose class</option>
+                <option>Nursery</option>
+                <option>LKG</option>
+                <option>UKG</option>
+                <option>Class I</option>
+                <option>Class II – V</option>
+                <option>Class VI – VIII</option>
+                <option>Class IX – X</option>
+                <option>Class XI (Science)</option>
+                <option>Class XI (Commerce)</option>
+                <option>Class XI (Humanities)</option>
+              </select>
+              <div class="invalid-feedback">Please select a class.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="prevSchool">Previous School (if any)</label>
+              <input type="text" class="form-control" id="prevSchool" placeholder="Optional">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="parentName">Parent / Guardian Name</label>
+              <input type="text" class="form-control" id="parentName" required>
+              <div class="invalid-feedback">Please enter parent's name.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="parentPhone">Phone Number</label>
+              <input type="tel" class="form-control" id="parentPhone" pattern="[0-9+ -]{7,15}" required>
+              <div class="invalid-feedback">Please enter a valid phone number.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="parentEmail">Email Address</label>
+              <input type="email" class="form-control" id="parentEmail" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="locality">Locality in Patna</label>
+              <input type="text" class="form-control" id="locality" placeholder="e.g. Kankarbagh, Boring Road">
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="admMessage">Anything you'd like us to know</label>
+              <textarea class="form-control" id="admMessage" rows="3" placeholder="Optional"></textarea>
+            </div>
+            <div class="col-12 form-check ps-4">
+              <input class="form-check-input" type="checkbox" id="admConsent" required>
+              <label class="form-check-label small text-muted" for="admConsent">
+                I agree to be contacted by Patna Public School regarding this enquiry.
+              </label>
+              <div class="invalid-feedback">Please provide consent to proceed.</div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-maroon btn-lg mt-2">Submit Enquiry <i class="bi bi-send ms-1"></i></button>
+            </div>
+          </div>
+        </form>
+        <div class="form-success d-none text-center py-5">
+          <i class="bi bi-check-circle-fill text-forest" style="font-size:3rem"></i>
+          <h5 class="mt-3 fw-bold">Enquiry received!</h5>
+          <p class="text-muted mb-0">Thank you. Our admissions office will call you within one working day.</p>
+        </div>
+      </div>
+      <div class="admit-stub">
+        <div>
+          <svg viewBox="0 0 42 48" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 2 L39 9 V22 C39 34 31 43 21 46 C11 43 3 34 3 22 V9 Z" fill="#4E1620" stroke="#C6972F" stroke-width="1.5"/>
+            <path d="M21 14 C24 17 25 20 21 24 C17 20 18 17 21 14 Z" fill="#C6972F"/>
+          </svg>
+        </div>
+        <div class="stub-label">ADMISSION ENQUIRY · 2026–27</div>
+        <div class="small" style="color:rgba(251,247,239,.65)">PPS / BAILEY&nbsp;RD</div>
+        <div class="stub-hole-bottom"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <a class="crest navbar-dark d-inline-flex mb-3" href="index.html">
+          <svg viewBox="0 0 42 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 2 L39 9 V22 C39 34 31 43 21 46 C11 43 3 34 3 22 V9 Z" fill="#4E1620" stroke="#C6972F" stroke-width="1.5"/>
+            <path d="M21 14 C24 17 25 20 21 24 C17 20 18 17 21 14 Z" fill="#C6972F"/>
+            <rect x="13" y="30" width="16" height="3" rx="1" fill="#F1E1B8"/>
+            <rect x="13" y="35" width="16" height="2" rx="1" fill="#F1E1B8" opacity=".7"/>
+          </svg>
+          <span class="crest-word"><span class="line1">Patna Public School</span><span class="line2">Est. 1985 · Bailey Road</span></span>
+        </a>
+        <p class="small mb-4">A CBSE-affiliated school on Bailey Road, Patna, educating Nursery through Class XII since 1985.</p>
+        <div class="d-flex gap-2">
+          <a href="#" class="footer-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Explore</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small">
+          <li><a href="academics.html#events">Events</a></li>
+          <li><a href="about.html#facilities">Facilities</a></li>
+          <li><a href="admissions.html#form">Admission Form</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6>Reach Us</h6>
+        <ul class="list-unstyled d-flex flex-column gap-3 small">
+          <li class="d-flex gap-2"><i class="bi bi-geo-alt-fill mt-1"></i><span>Bailey Road, Patna, Bihar – 800014</span></li>
+          <li class="d-flex gap-2"><i class="bi bi-telephone-fill mt-1"></i><a href="tel:+919876012345">+91 98760 12345</a></li>
+          <li class="d-flex gap-2"><i class="bi bi-envelope-fill mt-1"></i><a href="mailto:info@patnapublicschool.com">info@patnapublicschool.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span>&copy; 2026 Patna Public School. All rights reserved.</span>
+      <span>Bailey Road, Patna, Bihar – 800014</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
